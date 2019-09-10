@@ -19,10 +19,10 @@ public class HomePage {
 
     public void enterProductName(){ // ввод названия продукта
         searchField.sendKeys("samsung galaxy s10e 6/128");
-    }
+    }  // ввод названи товара
 
     public void clickSearch(){ // клик enter
         searchField.sendKeys(Keys.ENTER);
-    }
+    }  // кликаем enter в поле поиска
 }
 

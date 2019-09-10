@@ -13,24 +13,24 @@ public class ProductPage {
         PageFactory.initElements(webDriver, this);
     }
 
-    @FindBy(xpath = "//button[text()='В корзину']")
+    @FindBy(xpath = "//button[text()='В корзину']") // кнопка В корзину
     private WebElement addToBasketButton;
 
-    @FindBy(css = "span.name")
+    @FindBy(css = "span.name")  // название товара
     private WebElement productName;
+
+    @FindBy(css = "a.c-btn-main.j-go-to-basket")
+    private WebElement basket;  // кнопка Корзина
 
     public String getProductName(){
         return productName.getText();
-    }
+    } // получаем название товара
 
     public void addToBasket(){
         addToBasketButton.click();
-    }
-
-    @FindBy(css = "a.c-btn-main.j-go-to-basket")
-    private WebElement basket;
+    }  // добавление в корзину
 
     public void goToBasket(){
         basket.click();
-    }
+    }  // переход к корзине
 }
