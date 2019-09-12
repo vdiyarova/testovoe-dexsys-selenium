@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {  // класс с настройками браузера
-    protected static WebDriver driver;
+    static WebDriver driver;
 
     @BeforeClass
     public static void setUp(){
@@ -17,6 +17,7 @@ public class BaseTest {  // класс с настройками браузер�
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        driver.get("https://www.wildberries.ru/"); // открываем страницу сайта
     }
 
     @After
@@ -26,6 +27,7 @@ public class BaseTest {  // класс с настройками браузер�
 
     @AfterClass
     public static void tearDown(){
+        driver.manage().deleteAllCookies();
         if(driver != null){
             driver.close();
         }

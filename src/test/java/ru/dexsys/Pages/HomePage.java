@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
-    WebDriver webDriver;
+    private WebDriver webDriver;
 
     public HomePage(WebDriver webDriver) {
         this.webDriver = webDriver;
