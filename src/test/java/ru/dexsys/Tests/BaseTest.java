@@ -27,7 +27,6 @@ public class BaseTest {  // класс с настройками браузер�
 
     @AfterClass
     public static void tearDown(){
-        driver.manage().deleteAllCookies();
         if(driver != null){
             driver.close();
         }
